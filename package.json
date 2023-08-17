@@ -1,0 +1,29 @@
+{
+  "name": "fn-api",
+  "version": "0.0.1",
+  "description": "An open source project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulf-frostypaw/website-api.git"
+  },
+  "keywords": [
+    "furry",
+    "social-network",
+    "open",
+    "source",
+    "project"
+  ],
+  "author": "Ulf FrostyPaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulf-frostypaw/website-api/issues"
+  },
+  "homepage": "https://github.com/ulf-frostypaw/website-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
