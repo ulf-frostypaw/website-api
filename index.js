@@ -18,7 +18,6 @@ db.connect((err) => {
       console.log('Conexión a la base de datos establecida');
     }
   });
-
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
@@ -28,27 +27,37 @@ app.get("/users", (req, res) => { // fetch users from DB
         age: 30
     }});
 });
-
+/* EMAIL CONFIGS */
 /* USER CONFIGS */
-app.get("/users/:id", (req, res) => {
+app.get("/user/:id", (req, res) => {
     // retrun user data
 });
-app.post("/user", (req, res) => {
+app.post("/user/:id", (req, res) => {
     // create user
 });
-app.put("/user", (req, res) => {
+app.put("/user/:id", (req, res) => {
     // update user (all data is saved)
 });
-app.path("/user", (req, res) => {
+app.path("/user/:id", (req, res) => {
     // update user data (one param)
 });
-app.delete("/user", (req, res) => {
+app.delete("/user/:id", (req, res) => {
     // delete user 
 });
+app.get("/verify/:code", (req, res) => {
+  res.status(200).send("Code verified");
+});
+app.get("/watch/:id_video", (req, res) => {
+  res.send(`Viendo: ${req.params.id_video}`);
+})
+app.get("/search", (req, res) => { // FORMULARIO DE BUSQUEDA. BSUCA EN LA BASE DE DATOS
+  res.send(`Buscando: ${req.query.q}`);
+})
 
 app.use((req, res) => {
-    res.status(404).send("Not Found");
+    res.status(404).json({"errorMessage":{"title":"error 404","description":"Pagina no registrada en la API"}});
 })
+
 app.listen(3000, () => {
   console.log("Example app listening on port 3000!");
 });
