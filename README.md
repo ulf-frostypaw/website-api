@@ -7,6 +7,24 @@
 * [ ] cifrado de datos
 * [x] urlencode BUG: ```undefined```
 
+project-root/
+  ├── controllers/
+  │    └── ...
+  ├── models/
+  │    └── ...
+  ├── routes/
+  │    └── ...
+  ├── middlewares/
+  │    └── ...
+  ├── config/
+  │    └── ...
+  ├── app.js
+  ├── Other files...
+  └── package.json
+  
 DOCS:
 - https://expressjs.com/en/guide/routing.html
 - https://www.passportjs.org/
+
+Notas:
+- Modelos: son la base logica de las tablas (estructura)
