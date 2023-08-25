@@ -4,6 +4,8 @@ const app = express();
 const router = Router();
 import routes from "./routes/routes.route.js"
 import sequelize from './config/database.js'
+import { config } from 'dotenv'
+config()
 // metodo principal
 //import './models/User.js'
 //import './models/Post.js'
@@ -17,8 +19,8 @@ async function main(){
         router.use((req, res) => {
             res.status(404).json({"errorMessage":{"title":"error 404","description":"Pagina no registrada en la API"}});
         })
-        app.listen(3000, () => {
-          console.log(`Example app listening on port ${3000}`);
+        app.listen(process.env.VITE_APP_HOST, () => {
+          console.log(`Example app listening on port ${process.env.VITE_APP_HOST}`); /// no mostrar en prod
         });
         
       } catch (error) {

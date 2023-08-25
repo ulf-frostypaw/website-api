@@ -20,3 +20,48 @@ export const createUser = async (req , res ) => {
     }    
 
 }
+export const updateUser = async (req, res) => {
+    const {id} = req.params // respetar el orden de los parametros dados en la URL
+    const {username, firstName, lastName} = req.body
+    try {
+        const dataUser = await User.findByPk(id) // lo saca de la base de datos si existe lo guarda y sino da un error
+        dataUser.username = username
+        dataUser.firstName = firstName
+        dataUser.lastName = lastName
+        await dataUser.save()
+        res.json(dataUser)
+    } catch (error) {
+        //console.log(error)
+        res.status(500).json({message: "Error interno", content: error})
+    }
+}
+
+export const deleteUser = async (req, res) => {
+    const {username} = req.params // respetar el orden de los parametros dados en la URL
+    try {
+        await User.destroy({
+            where: {
+              username
+            }
+          });
+        res.sendStatus(204)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message: "Error interno", content: error})
+    }
+}
+
+export const getUniqueUser = async (req, res) => {
+    const {username} = req.params // obtiene todos los datos por el `username`
+    try {
+        const dataUser = await User.findOne({
+            where: {
+                username
+            }
+        })
+        res.json(dataUser)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({message: "Error interno", content: error})
+    }
+}
