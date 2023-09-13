@@ -15,7 +15,7 @@ app.use(express.json())
 app.use('/v1', routes);
 async function main(){
     try {
-        await sequelize.sync({force: false}); // {force: true} - ONLY DEV MODE
+        await sequelize.sync({force: false }); // {force: true} - ONLY DEV MODE (DROP DB)
         router.use((req, res) => {
             res.status(404).json({"errorMessage":{"title":"error 404","description":"Pagina no registrada en la API"}});
         })

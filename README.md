@@ -1,28 +1,20 @@
 # furries.network backend
-**NOTA: ACTUALIZAR LAS CREDENCIALES Y LA IP EN EL HOST**
+**Runing API version: beta-0.0.1**
 
 ## todo list
-* [ ] Documentar las URL
-* [ ] cifrado de datos
 
-```bash
-project-root/
-  ├── controllers/
-  │    └── ...
-  ├── models/
-  │    └── ...
-  ├── routes/
-  │    └── ...
-  ├── middlewares/
-  │    └── ...
-  ├── config/
-  │    └── ...
-  ├── app.js
-  ├── Other files...
-  └── package.json
-```
-  
-DOCS:
+* [x] Documentar las URL
+* [x] cifrado de datos (CryptoES)
+* [ ] Subida de archivos al server global (usar AWS )
+
+# API Reference:
+
+    | route | params | method |
+    | --- | --- | --- |
+    | /users | username, id | GET, POST, PUT, DELETE |
+    | /posts | postId, id | GET,POST,PUT,DELETE |
+    
 
 Notas:
-- Modelos: son la base logica de las tablas (estructura)
+
+* Modelos: son la base logica de las tablas (estructura)
