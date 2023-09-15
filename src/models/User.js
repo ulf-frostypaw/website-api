@@ -7,6 +7,9 @@ export const User = sequelize.define('User', {
         primaryKey: true,
         autoIncrement: true
     },
+    userId:{ // this create the ID
+        type: DataTypes.INTEGER
+    },
     username:{
         type: DataTypes.STRING,
         allowNull: false

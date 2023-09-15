@@ -1,5 +1,5 @@
 # furries.network backend
-**Runing API version: beta-0.0.1**
+**Runing API version: beta-0.0.3**
 
 ## todo list
 
@@ -9,10 +9,12 @@
 
 # API Reference:
 
-    | route | params | method |
-    | --- | --- | --- |
-    | /users | username, id | GET, POST, PUT, DELETE |
-    | /posts | postId, id | GET,POST,PUT,DELETE |
+| route | params | method |
+| :--- | :---: | ---: |
+| /users | username, id | GET, POST, PUT, DELETE |
+| /posts | postId, id | GET,POST,PUT,DELETE |
+
+<!-- LISTAR RUTAS CUANDO ESTEN DTERMINADAS EN LOS MODELOS -->
     
 
 Notas:
