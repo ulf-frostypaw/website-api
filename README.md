@@ -1,5 +1,5 @@
 # furries.network backend
-**Runing API version: beta-0.0.3**
+**Runing API version: beta-0.0.4**
 
 ## todo list
 
@@ -17,6 +17,11 @@
 <!-- LISTAR RUTAS CUANDO ESTEN DTERMINADAS EN LOS MODELOS -->
     
 
-Notas:
-
-* Modelos: son la base logica de las tablas (estructura)
+# Librerias
+ - uniqid
+ - crypto-es
+ - sequelize
+ - mysql2
+ - express.js
+ - dotenv
+ - jwt (???)
